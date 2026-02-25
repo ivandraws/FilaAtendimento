@@ -21,6 +21,8 @@ int main(int argc, char const *argv[])
     srand(time(NULL));
     int qntd = sizeof(guiches) / sizeof(guiches[0]);
 
+    int chamadas = 0;
+    
     call(qntd);
 
     return 0;
