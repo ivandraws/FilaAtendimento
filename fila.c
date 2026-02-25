@@ -12,8 +12,8 @@ typedef struct node
 int guiches[] = {1, 2, 3, 4, 5};
 
 void insertName();
-
 void call(int qntd);
+void unload();
 
 int main(int argc, char const *argv[])
 {
@@ -25,6 +25,8 @@ int main(int argc, char const *argv[])
     
     call(qntd);
 
+    unload();
+
     return 0;
 }
 
@@ -35,13 +37,18 @@ void insertName()
     printf("Digite o nome inicial do paciente: ");
     scanf("%s", nome_digitado);
     // Se o nome digitado der overflow no nome_digitado, deve informar um alerta e pedir para digitar o nome de novo
-    if (sizeof(nome_digitado) / sizeof(nome_digitado[0]) > 47);
+    /*if (sizeof(nome_digitado) / sizeof(nome_digitado[0]) > 47);
     {
 
-    }
+    }*/
 }
 
 void call(int qntd)
 {
     printf("Paciente INSERIR NOME AQUI, dirigir-se para guichê %i\n", guiches[rand() % qntd]);
+}
+
+void unload()
+{
+    printf("All memory has been free'ed\n");
 }
